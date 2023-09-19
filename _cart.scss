@@ -1,0 +1,235 @@
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+.top-cart {
+    height: 400px;
+    background-image: url(img/background-cart.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+    &-form {
+    background: #F7F6F6;
+    border-radius: 20px;
+    height: 556px;
+    grid-column: span 4;
+    }
+    &-content  {
+    grid-column: span 8;
+    }
+    &-name-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    }
+    &-name-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;        
+    display: flex;
+    align-items: center;       
+    color: #000000;
+    }
+    &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 0.5px solid #CACDD8;
+    padding-top: 25px;
+    padding-bottom: 32px;
+    }
+    &-item:not(:last-child)::after {
+    border-bottom: 0.5px solid #CACDD8;
+    }
+    &-item-input {
+    width: 71px;
+    height: 51px;
+    left: 837px;
+    top: 523px;
+    background: #F7F6F6;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    }
+    &-item-button {
+    background-color: transparent;
+    width: 200px;
+    height: 37px;
+    left: 121px;
+    top: 983px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    transition: all 0.4s;
+    &:hover {
+        background-color: #000000;
+        color: #FFFFFF;
+    }  
+    }
+    &-info {
+    width: 276px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+    &-info-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;   
+    color: #000000;
+    }
+    &-info-link:hover {
+    text-decoration-line: underline;
+    }
+    &-info-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+    }
+    &-info-price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #050505;
+    }
+    &-link-box {
+    display: flex;
+    gap: 32px;
+    }
+    &-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 210%;
+    text-decoration-line: underline;
+    color: #000000;
+    &:hover {
+    text-decoration: none;
+    color: #888888;
+    }
+    }
+    &-left{
+    display: flex;
+    gap: 32px;
+    }
+    &-form {
+    display: flex;
+    flex-direction: column;
+    }
+    &-form-placebox {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    }
+    &-form-title {
+    padding-top: 42px;
+    padding-bottom: 35px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    text-align: center;
+    }
+    &-form-input {
+    width: 288px;
+    margin-left: 28px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #CACDD8;
+    background-color: transparent;
+    }
+    &-form-input::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    }
+    &-form-price {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    }
+    &-submit-box {
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    }
+    &-form-button {
+    width: 288px;
+    height: 41px;
+    border-radius: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    &:hover {
+        animation: myAnim 3s linear 0s infinite alternate both;
+    }     
+    }
+    &-button-box {
+    display: flex;
+    gap: 7px;
+    padding-top: 50px;
+    }
+}
